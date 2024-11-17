@@ -1,0 +1,20 @@
+{
+  "manifest_version": 3,
+  "name": "use-chrome Test Extension",
+  "version": "1.0.0",
+  "description": "Test extension for use-chrome hooks",
+  "permissions": [
+    "storage",
+    "tabs"
+  ],
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  },
+  "action": {
+    "default_popup": "index.html"
+  },
+  "content_security_policy": {
+    "extension_pages": "script-src 'self'; object-src 'self'"
+  }
+}
